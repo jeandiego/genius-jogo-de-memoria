@@ -8,10 +8,8 @@ import {
   ContentWrapper,
   FooterAction,
   LeaderboardWrapper,
-  LevelWrapper,
   StatsWrapper,
 } from './styles';
-import LevelSelector from '~/components/LevelSelector';
 import Header from '~/components/Header';
 import StatsCard from '~/components/StatsCard';
 import LeaderboardCard from '~/components/LeaderboardCard';
@@ -32,12 +30,6 @@ const HomeView = ({ greetings, statistics, leaderboard, gameLevel }) => {
         <GeniusText size={26} fontFamily="medium" color="textHeading" pLeft={8}>
           {t('HOME.STATS')}
         </GeniusText>
-
-        <LevelWrapper>
-          {gameLevel.map((item) => (
-            <LevelSelector key={item.level} text={item.text} />
-          ))}
-        </LevelWrapper>
 
         <StatsWrapper>
           {statistics.map((item) => (
