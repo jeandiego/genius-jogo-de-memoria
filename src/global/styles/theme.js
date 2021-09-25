@@ -14,12 +14,16 @@ export const common = {
 export const lightTheme = {
   ...common,
 
-  primary: '#5636D3',
+  primary: '#3E97D1',
+  primary_light: '#65A6D0',
+  primary_dark: '#0A67A4',
+
   background: '#F0F2F5',
   cardBackground: '#FFFFFF',
 
-  secondary: '#FF872C',
-  secondary_light: 'rgba(255, 135, 44, 0.3)',
+  secondary: '#FFBC01',
+  secondary_light: '#FECD3F',
+  secondary_dark: '#FFDA72',
 
   success: '#12A454',
   success_light: 'rgba(18, 164, 84, 0.5)',
@@ -37,11 +41,15 @@ export const darkTheme = {
   ...common,
 
   primary: '#A370F7',
+  primary_light: '#65A6D0',
+  primary_dark: '#0A67A4',
+
   background: '#121015',
   cardBackground: '#1F1E25',
 
   secondary: '#FF872C',
   secondary_light: 'rgba(255, 135, 44, 0.3)',
+  secondary_dark: 'rgba(255, 135, 44, 0.3)',
 
   success: '#12A454',
   success_light: 'rgba(18, 164, 84, 0.5)',
