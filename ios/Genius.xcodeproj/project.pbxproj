@@ -14,6 +14,9 @@
 		396D82E462114544548BFE1F /* libPods-Genius-GeniusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B0D4255BECC1F48841FB32 /* libPods-Genius-GeniusTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A8CBC10EDF2F39B468A4899A /* libPods-Genius.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606C5E0FCD119CF03927BEF6 /* libPods-Genius.a */; };
+		DCCEABD6D9AE49E881F0F1E7 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738A4611B26E49B8BCDDBC3E /* JosefinSans-Bold.ttf */; };
+		82495FF11A1A45BB90797DED /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 939F248E7C524116B265E63F /* JosefinSans-Medium.ttf */; };
+		2A3711B25A5C403BAD0A075D /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4935A82F78414B0D93B00B36 /* JosefinSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		B05FA10F7712AAC9A703CD64 /* Pods-Genius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genius.debug.xcconfig"; path = "Target Support Files/Pods-Genius/Pods-Genius.debug.xcconfig"; sourceTree = "<group>"; };
 		CAD5F4E4FEEDCAEFF54AEA8B /* Pods-Genius-GeniusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genius-GeniusTests.debug.xcconfig"; path = "Target Support Files/Pods-Genius-GeniusTests/Pods-Genius-GeniusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		738A4611B26E49B8BCDDBC3E /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; name = "JosefinSans-Bold.ttf"; path = "../src/assets/fonts/JosefinSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		939F248E7C524116B265E63F /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; name = "JosefinSans-Medium.ttf"; path = "../src/assets/fonts/JosefinSans-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4935A82F78414B0D93B00B36 /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; name = "JosefinSans-Regular.ttf"; path = "../src/assets/fonts/JosefinSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				85A02DEAF1FC89AA4C61560F /* Pods */,
+				29FAEFE5F00247FC9D559E52 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +155,17 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		29FAEFE5F00247FC9D559E52 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				738A4611B26E49B8BCDDBC3E /* JosefinSans-Bold.ttf */,
+				939F248E7C524116B265E63F /* JosefinSans-Medium.ttf */,
+				4935A82F78414B0D93B00B36 /* JosefinSans-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +263,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DCCEABD6D9AE49E881F0F1E7 /* JosefinSans-Bold.ttf in Resources */,
+				82495FF11A1A45BB90797DED /* JosefinSans-Medium.ttf in Resources */,
+				2A3711B25A5C403BAD0A075D /* JosefinSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
