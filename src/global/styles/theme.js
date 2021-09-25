@@ -31,8 +31,8 @@ export const lightTheme = {
   attention: '#E83F5B',
   attention_light: 'rgba(232, 63, 91, 0.5)',
 
-  textHeading: '#363F5F',
-  textHighlight: '#969CB2',
+  textHeading: '#FFFFFF',
+  textHighlight: 'rgba(255, 255, 255, 0.60)',
   textMedium: 'rgba(57, 59, 77, 0.57)',
   textDisabled: 'rgba(0, 0, 0, 0.18)',
 };
