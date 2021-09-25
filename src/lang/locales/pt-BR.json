@@ -21,10 +21,9 @@
       "AFTERNOON": "Boa tarde",
       "NIGHT": "Boa noite"
     },
-    "LEVEL": {
-      "FIRST": "Fase 1",
-      "SECOND": "Fase 2",
-      "THIRD": "Fase 3"
+    "GAME": {
+    "TIMER": "tempo",
+    "MOVES" : "jogadas"
     }
   }
 }
