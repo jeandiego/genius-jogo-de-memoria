@@ -1,28 +1,25 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ActionButton from '~/components/ActionButton';
+import GlobalContainer from '~/components/Container';
 import GeniusInput from '~/components/GeniusInput';
 import GeniusText from '~/components/GeniusText';
-import {
-  Container,
-  GreetingsView,
-  IconView,
-  InputView,
-  KeyboardView,
-} from './styles';
+import { GreetingsView, IconView, InputView, KeyboardView } from './styles';
 
 const HomeView = ({ onPress }) => {
   const [isFocused, setIsFocused] = useState(false);
+  const { t } = useTranslation();
 
-  function handleOnFocus() {
+  const handleOnFocus = () => {
     setIsFocused(true);
-  }
+  };
 
-  function handleOnBlur() {
+  const handleOnBlur = () => {
     setIsFocused(false);
-  }
+  };
 
   return (
-    <Container>
+    <GlobalContainer background="primary">
       <KeyboardView>
         <IconView />
         <GreetingsView>
@@ -32,29 +29,37 @@ const HomeView = ({ onPress }) => {
             size={28}
             pBottom={16}
             align="center">
-            Bem vindo ao Genius
+            {t('START.WELCOME')}
           </GeniusText>
           <GeniusText color="white" align="center" size={18}>
-            Bora testar a sua memória neste jogo? Digite seu nome e desce o
-            Play!
+            {t('START.DESCRIPTION')}
           </GeniusText>
         </GreetingsView>
         <InputView>
+          <GeniusText
+            align="center"
+            fontFamily="bold"
+            color="primary_dark"
+            size={16}
+            pBottom={8}>
+            {t('START.CREATE_USER')}
+          </GeniusText>
           <GeniusInput
             isFocused={isFocused}
-            placeholder="Digite seu nome..."
-            onFocus={() => handleOnFocus()}
-            onBlur={() => handleOnBlur()}
+            placeholder={t('START.PLACEHOLDER')}
+            onFocus={handleOnFocus}
+            onBlur={handleOnBlur}
             // onChangeText={}
           />
         </InputView>
       </KeyboardView>
       <ActionButton
-        text="Começar a jogar"
+        text={t('START.BUTTON_START')}
         activeOpacity={0.75}
         onPress={onPress}
+        background="secondary"
       />
-    </Container>
+    </GlobalContainer>
   );
 };
 

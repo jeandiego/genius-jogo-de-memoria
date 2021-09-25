@@ -1,16 +1,5 @@
 import styled from 'styled-components/native';
 import { Platform, KeyboardAvoidingView } from 'react-native';
-import { IPHONE_X_BOTTOM_SPACE, IPHONE_X_HEIGHT } from '~/config/constants';
-
-export const Container = styled.View`
-  flex: 1;
-  background-color: ${({ theme }) => theme.colors.primary};
-  padding: 0 16px;
-  padding-bottom: ${IPHONE_X_BOTTOM_SPACE}px;
-  padding-top: ${IPHONE_X_HEIGHT + 24}px;
-  justify-content: space-between;
-  align-items: center;
-`;
 
 export const KeyboardView = styled(KeyboardAvoidingView).attrs({
   behavior: Platform.OS === 'ios' ? 'padding' : 'height',
