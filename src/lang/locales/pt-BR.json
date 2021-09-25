@@ -1,0 +1,13 @@
+{
+  "error": {},
+  "translation": {
+    "REGION": "BR",
+    "REGION_MASK": "pt-BR",
+    "START": {
+      "WELCOME": "Bem-vindo",
+      "DESCRIPTION": "Bora testar a sua memória neste jogo? Digite seu nome e desce o Play!",
+      "BUTTON_START": "Começar o jogo",
+      "PLACEHOLDER": "Digite seu nome..."
+    }
+  }
+}

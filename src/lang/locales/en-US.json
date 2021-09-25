@@ -1,0 +1,13 @@
+{
+  "error": {},
+  "translation": {
+    "REGION": "BR",
+    "REGION_MASK": "pt-BR",
+    "START": {
+      "WELCOME": "Welcome",
+      "DESCRIPTION": "Let`s check your memory in this game? Enter your name and Go Play!",
+      "BUTTON_START": "Start Game",
+      "PLACEHOLDER": "Enter your name..."
+    }
+  }
+}
