@@ -11,6 +11,7 @@ export const Text = styled.Text`
   padding-right: ${(p) => p.pRight || 0}px;
   margin-right: ${(p) => p.mRight || 0}px;
   margin-left: ${(p) => p.mLeft || 0}px;
+  padding-bottom: ${(p) => p.pBottom || 0}px;
   text-align: ${(p) => p.align || 'left'};
 `;
 
