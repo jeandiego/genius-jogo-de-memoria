@@ -1,11 +1,19 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { Container } from './styles';
+import PrimaryCard from '~/components/PrimaryCard';
+import Header from '~/components/Header';
+import { ContentView, CardsWrapper, Container } from './styles';
 
-const GameView = () => {
+const GameView = ({ cards }) => {
   return (
-    <Container>
-      <Text>GameView</Text>
+    <Container background="primary">
+      <Header type="Game" />
+      <ContentView>
+        <CardsWrapper>
+          {cards.map(() => (
+            <PrimaryCard activeOpacity={0.8} />
+          ))}
+        </CardsWrapper>
+      </ContentView>
     </Container>
   );
 };
