@@ -7,7 +7,24 @@
       "WELCOME": "Bem-vindo",
       "DESCRIPTION": "Bora testar a sua memória neste jogo? Digite seu nome e desce o Play!",
       "BUTTON_START": "Começar o jogo",
-      "PLACEHOLDER": "Digite seu nome..."
+      "CREATE_USER": "Criar seu usuário",
+      "PLACEHOLDER": "Digite seu nome ou apelido..."
+    },
+    "HOME": {
+      "BUTTON_PLAY": "Iniciar partida",
+      "BUTTON_CHANGE_USER": "Trocar jogador",
+      "STATS": "Estatísticas",
+      "TOP_LEADERBOARD": "Top 3 jogadores"
+    },
+    "GREETINGS": {
+      "MORNING": "Bom dia",
+      "AFTERNOON": "Boa tarde",
+      "NIGHT": "Boa noite"
+    },
+    "LEVEL": {
+      "FIRST": "Fase 1",
+      "SECOND": "Fase 2",
+      "THIRD": "Fase 3"
     }
   }
 }
