@@ -27,3 +27,18 @@ export const LevelWrapper = styled.View`
   justify-content: space-between;
   flex-direction: row;
 `;
+
+export const LineWrapper = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const CounterWrapper = styled.View`
+  flex: 1;
+  background-color: ${({ theme }) => theme.colors.secondary_dark};
+  padding: 8px 0;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  border-radius: 8px;
+`;
