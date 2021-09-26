@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { startGame } from '~/services/gameServices';
 import GameView from './view';
-import { clearCards, setCard } from '~/store/reducers/game';
+import { addMoves, clearCards, setCard } from '~/store/reducers/game';
 
 const Game = () => {
   const { cards, firstCard, secondCard, lockedMode } = useSelector(
@@ -24,12 +24,17 @@ const Game = () => {
     }
   };
 
+  const incrementNewMove = () => {
+    if (firstCard && secondCard) dispatch(addMoves());
+  };
+
   useEffect(() => {
     startGame();
   }, []);
 
   useEffect(() => {
     if (lockedMode) checkMatch(firstCard, secondCard);
+    incrementNewMove();
   }, [lockedMode]);
 
   return <GameView cards={cards} onPress={handleShownCard} />;
