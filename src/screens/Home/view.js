@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 import ActionButton from '~/components/ActionButton';
 import GeniusText from '~/components/GeniusText';
 import {
@@ -14,7 +14,7 @@ import Header from '~/components/Header';
 import StatsCard from '~/components/StatsCard';
 import LeaderboardCard from '~/components/LeaderboardCard';
 
-const HomeView = ({ greetings, statistics, leaderboard, gameLevel }) => {
+const HomeView = ({ greetings, statistics, leaderboard }) => {
   const navigation = useNavigation();
   const { t } = useTranslation();
 

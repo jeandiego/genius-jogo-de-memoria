@@ -6,8 +6,9 @@ import GeniusInput from '~/components/GeniusInput';
 import GeniusText from '~/components/GeniusText';
 import { GreetingsView, IconView, InputView, KeyboardView } from './styles';
 
-const HomeView = ({ onPress }) => {
+const HomeView = ({ nickname, setNickname, handleNewUser, onPress }) => {
   const [isFocused, setIsFocused] = useState(false);
+
   const { t } = useTranslation();
 
   const handleOnFocus = () => {
@@ -36,20 +37,22 @@ const HomeView = ({ onPress }) => {
           </GeniusText>
         </GreetingsView>
         <InputView>
-          <GeniusText
+          {/* <GeniusText
             align="center"
             fontFamily="bold"
             color="primary_dark"
             size={16}
             pBottom={8}>
             {t('START.CREATE_USER')}
-          </GeniusText>
+          </GeniusText> */}
           <GeniusInput
             isFocused={isFocused}
             placeholder={t('START.PLACEHOLDER')}
             onFocus={handleOnFocus}
             onBlur={handleOnBlur}
-            // onChangeText={}
+            value={nickname}
+            onChangeText={setNickname}
+            onSubmitEditing={handleNewUser}
           />
         </InputView>
       </KeyboardView>

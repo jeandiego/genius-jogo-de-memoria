@@ -5,11 +5,14 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 export const Container = styled(TouchableOpacity)`
-  width: ${windowWidth / 4}px;
+  width: ${windowWidth / 5}px;
   height: ${windowHeight / 12}px;
+  /* width: 86px;
+  height: 86px; */
   background: ${(p) => p.theme.colors.primary_dark};
   border-radius: 8px;
-  margin: 8px;
+  margin: 4px;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 `;

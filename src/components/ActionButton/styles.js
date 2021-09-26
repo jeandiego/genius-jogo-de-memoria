@@ -8,6 +8,6 @@ export const Container = styled(TouchableOpacity)`
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  border-bottom-right-radius: 64px;
-  border-top-left-radius: 64px;
+  border-bottom-right-radius: 42px;
+  border-top-left-radius: 42px;
 `;

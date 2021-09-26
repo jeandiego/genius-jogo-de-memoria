@@ -5,7 +5,6 @@ import { Container, ScoreWrapper, RankingView } from './styles';
 
 const LeaderboardCard = ({ leaderboard, ...props }) => {
   const { username, position, plays } = leaderboard;
-  console.log(username);
 
   return (
     <Container {...props}>

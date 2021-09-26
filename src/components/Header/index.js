@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import {
   Container,
   IconButton,
@@ -11,14 +12,20 @@ import GeniusText from '../GeniusText';
 import Trophy from '~/assets/svgs/trophy.svg';
 
 const HeaderHome = ({ greetings }) => {
+  const { currentUser } = useSelector((state) => state.user);
+
   return (
     <Container>
       <ViewWrapper>
-        <GeniusText size={20} fontFamily="regular" color="textHeading">
+        <GeniusText
+          size={20}
+          fontFamily="regular"
+          color="textHeading"
+          pBottom={8}>
           {greetings}
         </GeniusText>
         <GeniusText size={26} fontFamily="bold" color="textHeading">
-          Jean Diego
+          {currentUser.user}
         </GeniusText>
       </ViewWrapper>
       <IconButton>
@@ -28,13 +35,14 @@ const HeaderHome = ({ greetings }) => {
   );
 };
 
-const HeaderGame = ({ user, ...props }) => {
+const HeaderGame = ({ ...props }) => {
+  const { currentUser } = useSelector((state) => state.user);
   const { t } = useTranslation();
 
   return (
     <Container style={{ flexDirection: 'column' }} {...props}>
       <GeniusText size={18} fontFamily="bold" pBottom={8}>
-        <GeniusText>Jogador:</GeniusText> Jean Diego
+        <GeniusText>Jogador:</GeniusText> {currentUser.user}
       </GeniusText>
       <LineWrapper>
         <CounterWrapper>

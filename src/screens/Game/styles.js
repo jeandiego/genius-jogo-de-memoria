@@ -9,7 +9,6 @@ export const Container = styled(GlobalContainer)`
 `;
 
 export const CardsWrapper = styled.View`
-  flex: 1;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,4 +16,6 @@ export const CardsWrapper = styled.View`
 
 export const ContentView = styled.View`
   flex: 1;
+  align-items: center;
+  justify-content: center;
 `;

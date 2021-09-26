@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { startGame } from '~/services/gameServices';
 import GameView from './view';
+import { setCardStatus } from '~/store/reducers/game';
 
 const Game = () => {
-  const cards = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-  ];
+  const { cards } = useSelector((state) => state.game);
+  const dispatch = useDispatch();
 
-  return <GameView cards={cards} />;
+  const handleShownCard = (card) => {
+    dispatch(setCardStatus(card));
+  };
+
+  useEffect(() => {
+    startGame();
+  }, []);
+
+  useEffect(() => {}, [cards]);
+
+  return <GameView cards={cards} onPress={handleShownCard} />;
 };
 
 export default Game;

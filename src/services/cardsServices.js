@@ -8,6 +8,8 @@ import Hawkman from '~/assets/svgs/Hawkman.svg';
 import Spider from '~/assets/svgs/Spider.svg';
 import Superman from '~/assets/svgs/Superman.svg';
 import WonderWoman from '~/assets/svgs/Wonder-Woman.svg';
+import Deadpool from '~/assets/svgs/Deadpool.svg';
+import Hulk from '~/assets/svgs/Hulk.svg';
 
 export const heroesCard = [
   Avengers,
@@ -20,4 +22,6 @@ export const heroesCard = [
   Spider,
   Superman,
   WonderWoman,
+  Deadpool,
+  Hulk,
 ];
