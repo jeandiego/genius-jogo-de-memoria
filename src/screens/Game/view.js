@@ -13,10 +13,12 @@ const GameView = ({ cards, onPress }) => {
             return (
               <PrimaryCard
                 key={item.id}
-                item={item}
+                data={item}
                 isVisible={item.status}
-                activeOpacity={0.8}
-                onPress={() => onPress(item.id)}
+                activeOpacity={item.shown ? 1 : 0.8}
+                onPress={() => {
+                  item.shown || onPress(item.id);
+                }}
               />
             );
           })}

@@ -12,16 +12,16 @@ import Deadpool from '~/assets/svgs/Deadpool.svg';
 import Hulk from '~/assets/svgs/Hulk.svg';
 
 export const heroesCard = [
-  Avengers,
-  Batman,
-  CaptainAmerica,
-  DC,
-  Flash,
-  GreenLantern,
-  Hawkman,
-  Spider,
-  Superman,
-  WonderWoman,
-  Deadpool,
-  Hulk,
+  { Avengers },
+  { Batman },
+  { CaptainAmerica },
+  { DC },
+  { Flash },
+  { GreenLantern },
+  { Hawkman },
+  { Spider },
+  { Superman },
+  { WonderWoman },
+  { Deadpool },
+  { Hulk },
 ];

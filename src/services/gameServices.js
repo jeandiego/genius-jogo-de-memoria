@@ -1,7 +1,7 @@
 import store from '~/store';
-import { setCards } from '~/store/reducers/game';
+import { setCardsOnScreen } from '~/store/reducers/game';
 import { shuffle } from '~/utils/array';
-import { buildCard } from '~/utils/cards';
+import { buildCard, createCardId } from '~/utils/cards';
 import { heroesCard } from './cardsServices';
 
 export function startGame() {
@@ -11,10 +11,10 @@ export function startGame() {
   const shuffledCards = shuffle(duplicateCards);
 
   store.dispatch(
-    setCards(
-      shuffledCards.map((item, index) => ({
+    setCardsOnScreen(
+      shuffledCards.map((item) => ({
         ...item,
-        id: index,
+        id: createCardId(item.name),
       })),
     ),
   );

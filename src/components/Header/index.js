@@ -25,7 +25,7 @@ const HeaderHome = ({ greetings }) => {
           {greetings}
         </GeniusText>
         <GeniusText size={26} fontFamily="bold" color="textHeading">
-          {currentUser.user}
+          {currentUser?.user}
         </GeniusText>
       </ViewWrapper>
       <IconButton>
@@ -37,17 +37,18 @@ const HeaderHome = ({ greetings }) => {
 
 const HeaderGame = ({ ...props }) => {
   const { currentUser } = useSelector((state) => state.user);
+  const { moves } = useSelector((state) => state.game);
   const { t } = useTranslation();
 
   return (
     <Container style={{ flexDirection: 'column' }} {...props}>
       <GeniusText size={18} fontFamily="bold" pBottom={8}>
-        <GeniusText>Jogador:</GeniusText> {currentUser.user}
+        <GeniusText>Jogador:</GeniusText> {currentUser?.user}
       </GeniusText>
       <LineWrapper>
         <CounterWrapper>
           <GeniusText size={24} fontFamily="bold" color="primary_dark">
-            0
+            {moves}
           </GeniusText>
           <GeniusText size={14} color="primary_dark">
             {t('GAME.MOVES')}
