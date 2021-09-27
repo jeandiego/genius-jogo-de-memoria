@@ -43,7 +43,8 @@
     "no-console":"off",
     "no-param-reassign":"off",
     "import/extensions": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "react/prop-types": 0
   },
   "settings": {
     "import/resolver": {
