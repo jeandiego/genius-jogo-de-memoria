@@ -18,7 +18,7 @@ const UsersModal = ({ modalRef }) => {
   const dispatch = useDispatch();
 
   const handleNewUser = () => {
-    if (!currentUser) return;
+    if (!nickname) return;
 
     dispatch(addNewUser({ user: nickname }));
     setNickname('');

@@ -32,7 +32,12 @@ const HomeView = ({
       <Header greetings={greetings} goToLeaderboard={goToLeaderboard} />
 
       <ContentWrapper>
-        <GeniusText size={26} fontFamily="bold" color="textHeading" pLeft={8}>
+        <GeniusText
+          size={26}
+          fontFamily="bold"
+          color="textHeading"
+          pLeft={8}
+          pTop={24}>
           {t('HOME.STATS')}
         </GeniusText>
 
@@ -54,7 +59,7 @@ const HomeView = ({
         <LeaderboardWrapper>
           {!leaderboard.length ? (
             <EmptyLeaderboard
-              size={64}
+              size={86}
               message={t('LEADERBOARD.UFO_MESSAGE')}
             />
           ) : (

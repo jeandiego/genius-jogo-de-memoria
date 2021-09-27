@@ -1,14 +1,12 @@
 import styled from 'styled-components/native';
 import { TouchableOpacity, Dimensions } from 'react-native';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width / 5;
+const windowHeight = Dimensions.get('window').height / 12;
 
 export const Container = styled(TouchableOpacity)`
-  width: ${windowWidth / 5}px;
-  height: ${windowHeight / 12}px;
-  /* width: 86px;
-  height: 86px; */
+  width: ${windowWidth}px;
+  height: ${windowHeight}px;
   background: ${(p) => p.theme.colors.primary_dark};
   border-radius: 8px;
   margin: 4px;

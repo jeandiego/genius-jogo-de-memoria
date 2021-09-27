@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { ThemeContext } from 'styled-components';
 import {
   Container,
   IconButton,
@@ -13,6 +14,7 @@ import Trophy from '~/assets/svgs/trophy.svg';
 
 const HeaderHome = ({ greetings, goToLeaderboard }) => {
   const { currentUser } = useSelector((state) => state.user);
+  const themeContext = useContext(ThemeContext);
 
   return (
     <Container>
@@ -29,7 +31,7 @@ const HeaderHome = ({ greetings, goToLeaderboard }) => {
         </GeniusText>
       </ViewWrapper>
       <IconButton onPress={goToLeaderboard}>
-        <Trophy width={30} height={30} fill="black" />
+        <Trophy width={30} height={30} fill={themeContext.colors.primary} />
       </IconButton>
     </Container>
   );

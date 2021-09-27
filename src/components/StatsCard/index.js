@@ -8,14 +8,18 @@ const StatsCard = ({ data }) => {
     <Container>
       <TextWrapper>
         <GeniusText
-          color="primary"
+          color="textHeading"
           align="center"
           size={18}
           fontFamily="medium"
           pBottom={24}>
           {data.text}
         </GeniusText>
-        <GeniusText color="primary" align="center" size={64} fontFamily="bold">
+        <GeniusText
+          color="textHeading"
+          align="center"
+          size={64}
+          fontFamily="bold">
           {data.results}
         </GeniusText>
       </TextWrapper>

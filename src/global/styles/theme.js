@@ -26,11 +26,9 @@ export const lightTheme = {
   secondary_light: '#FECD3F',
   secondary_dark: '#FFDA72',
 
-  success: '#12A454',
-  success_light: 'rgba(18, 164, 84, 0.5)',
+  success: '#2EC2BA',
 
   attention: '#E83F5B',
-  attention_light: 'rgba(232, 63, 91, 0.5)',
 
   textHeading: '#FFFFFF',
   textHighlight: 'rgba(255, 255, 255, 0.60)',
@@ -41,18 +39,17 @@ export const lightTheme = {
 export const darkTheme = {
   ...common,
 
-  primary: '#A370F7',
-  primary_light: '#65A6D0',
-  primary_dark: '#0A67A4',
+  primary: '#121015',
+  primary_light: '#444252',
+  primary_dark: '#1F1E25',
 
   modalBackground: '#1F1E25',
 
-  secondary: '#FF872C',
-  secondary_light: 'rgba(255, 135, 44, 0.3)',
-  secondary_dark: 'rgba(255, 135, 44, 0.3)',
+  secondary: '#9A5EFC',
+  secondary_light: '#AD7DFC',
+  secondary_dark: '#1F0250',
 
-  success: '#12A454',
-  success_light: 'rgba(18, 164, 84, 0.5)',
+  success: '#9A5EFC',
 
   attention: '#E83F5B',
   attention_light: 'rgba(232, 63, 91, 0.5)',
@@ -60,5 +57,5 @@ export const darkTheme = {
   textHeading: 'rgba(255, 255, 255, 1)',
   textHighlight: 'rgba(255, 255, 255, 0.87)',
   textMedium: 'rgba(255, 255, 255, 0.60)',
-  textDisabled: 'rgba(255, 255, 255, 0.18)',
+  textDisabled: 'rgba(255, 255, 255, 0.12)',
 };

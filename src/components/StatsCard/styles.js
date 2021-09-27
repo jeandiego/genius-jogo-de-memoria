@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  background: ${({ theme }) => theme.colors.textHeading};
+  background: ${({ theme }) => theme.colors.primary_dark};
   flex: 1;
   margin: 8px;
   border-radius: 8px;

@@ -61,7 +61,7 @@ const Home = () => {
       {
         id: 2,
         text: t('HOME.POSITION'),
-        results: `${userStats.position}º`,
+        results: userStats.position,
       },
     ]);
   };
@@ -71,7 +71,7 @@ const Home = () => {
     const userStats = data.find((item) => item.id === currentUser.id);
 
     generateStatistics({
-      position: userPosition !== -1 ? userPosition + 1 : '-',
+      position: userPosition !== -1 ? `${userPosition + 1}º` : '-',
       ...userStats,
     });
   }, [data, currentUser]);

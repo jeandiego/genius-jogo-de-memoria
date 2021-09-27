@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { IPHONE_X_BOTTOM_SPACE, IPHONE_X_HEIGHT } from '~/config/constants';
+import { IPHONE_X_HEIGHT } from '~/config/constants';
 
 export const Container = styled.View`
   flex-direction: row;
@@ -8,13 +8,13 @@ export const Container = styled.View`
   justify-content: center;
   border-bottom-right-radius: 24px;
   border-bottom-left-radius: 24px;
-  padding: 0 16px;
-  padding-bottom: ${IPHONE_X_BOTTOM_SPACE}px;
-  padding-top: ${IPHONE_X_HEIGHT + 32}px;
+  padding: 16px 16px;
+  padding-top: ${IPHONE_X_HEIGHT + 8}px;
 `;
 
 export const ViewWrapper = styled.View`
   flex: 1;
+  padding: 16px 0;
 `;
 
 export const IconButton = styled.TouchableOpacity`

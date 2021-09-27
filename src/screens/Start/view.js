@@ -7,7 +7,7 @@ import GeniusText from '~/components/GeniusText';
 import { GreetingsView, IconView, InputView, KeyboardView } from './styles';
 import LogoSvg from '~/assets/svgs/brain.svg';
 
-const HomeView = ({ nickname, setNickname, handleNewUser, onPress }) => {
+const StartView = ({ nickname, setNickname, handleNewUser, onPress }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const { t } = useTranslation();
@@ -63,4 +63,4 @@ const HomeView = ({ nickname, setNickname, handleNewUser, onPress }) => {
   );
 };
 
-export default HomeView;
+export default StartView;
