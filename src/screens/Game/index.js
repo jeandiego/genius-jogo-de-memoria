@@ -8,11 +8,13 @@ import {
   setCard,
 } from '~/store/reducers/game';
 import { StartGame } from '~/services/gameServices';
+import { addUserScore } from '~/store/reducers/leaderboard';
 
 const Game = () => {
   const { cards, firstCard, secondCard, lockedMode, moves } = useSelector(
     (state) => state.game,
   );
+  const { currentUser } = useSelector((state) => state.user);
   const [modalVisible, setModalVisible] = useState(false);
   const dispatch = useDispatch();
 
@@ -41,15 +43,25 @@ const Game = () => {
   };
 
   useEffect(() => {
-    if (lockedMode) checkMatch(firstCard, secondCard);
-    incrementNewMove();
+    if (lockedMode) {
+      checkMatch(firstCard, secondCard);
+      incrementNewMove();
+    }
   }, [lockedMode]);
 
   useEffect(() => {
     const allShownedCards = cards.filter((item) => item.shown);
 
-    if (allShownedCards.length === cards.length && moves > 0)
+    if (allShownedCards.length === cards.length && moves > 0) {
+      dispatch(
+        addUserScore({
+          id: currentUser.id,
+          user: currentUser.user,
+          moves,
+        }),
+      );
       setModalVisible(!modalVisible);
+    }
   }, [cards]);
 
   return (

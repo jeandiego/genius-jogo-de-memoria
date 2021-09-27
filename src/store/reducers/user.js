@@ -12,7 +12,6 @@ const userSlice = createSlice({
     addNewUser: (state, action) => {
       const createId = new Date().getTime();
       const newUser = { ...action.payload, id: createId };
-      console.log(newUser);
       state.currentUser = newUser;
       state.users.push(newUser);
     },
