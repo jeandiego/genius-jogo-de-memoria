@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import GameView from './view';
-import {
-  addMoves,
-  clearCards,
-  clearGame,
-  setCard,
-} from '~/store/reducers/game';
+import { clearCards, clearGame, setCard } from '~/store/reducers/game';
 import { StartGame } from '~/services/gameServices';
 import { addUserScore } from '~/store/reducers/leaderboard';
 
@@ -32,20 +27,23 @@ const Game = () => {
     }
   };
 
-  const incrementNewMove = () => {
-    if (firstCard && secondCard) dispatch(addMoves());
-  };
-
   const handleRestartGame = () => {
     dispatch(clearGame());
     StartGame();
     setModalVisible(!modalVisible);
   };
 
+  const resetScreen = () => {
+    dispatch(clearGame());
+  };
+
+  useEffect(() => {
+    return () => resetScreen();
+  }, []);
+
   useEffect(() => {
     if (lockedMode) {
       checkMatch(firstCard, secondCard);
-      incrementNewMove();
     }
   }, [lockedMode]);
 
