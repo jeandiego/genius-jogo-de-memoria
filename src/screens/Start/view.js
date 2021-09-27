@@ -5,6 +5,7 @@ import GlobalContainer from '~/components/Container';
 import GeniusInput from '~/components/GeniusInput';
 import GeniusText from '~/components/GeniusText';
 import { GreetingsView, IconView, InputView, KeyboardView } from './styles';
+import LogoSvg from '~/assets/svgs/brain.svg';
 
 const HomeView = ({ nickname, setNickname, handleNewUser, onPress }) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -22,7 +23,9 @@ const HomeView = ({ nickname, setNickname, handleNewUser, onPress }) => {
   return (
     <GlobalContainer background="primary">
       <KeyboardView>
-        <IconView />
+        <IconView>
+          <LogoSvg width={160} height={160} fill="white" />
+        </IconView>
         <GreetingsView>
           <GeniusText
             color="textHeading"

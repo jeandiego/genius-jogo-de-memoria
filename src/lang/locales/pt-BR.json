@@ -19,7 +19,8 @@
       "PLACEHOLDER": "Adicione um novo jogador",
       "SELECT_USER": "Selecionar outro jogador: ",
       "BESTSCORE": "Menor número de jogadas",
-      "POSITION": "Posição no Ranking"
+      "POSITION": "Posição no Ranking",
+      "BUTTON_ADD_CHANGE": "Adicionar ou trocar jogador"
     },
     "GREETINGS": {
       "MORNING": "Bom dia",

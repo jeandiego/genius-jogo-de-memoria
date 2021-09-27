@@ -82,10 +82,10 @@ const HomeView = ({
           mBottom={8}
         />
         <ActionButton
-          text="Adicionar novo jogador"
+          text={t('HOME.BUTTON_ADD_CHANGE')}
           onPress={onOpen}
           size={18}
-          background="success"
+          background="primary_dark"
         />
       </FooterView>
       <UsersModal modalRef={modalRef} />

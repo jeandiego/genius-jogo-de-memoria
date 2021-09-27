@@ -14,7 +14,6 @@ export const IconView = styled.View`
   width: 164px;
   height: 164px;
   border-radius: 200px;
-  background-color: white;
 `;
 
 export const GreetingsView = styled.View`
