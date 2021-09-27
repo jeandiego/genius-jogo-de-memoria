@@ -31,7 +31,7 @@ Aplicativo de teste técnico para processo seletivo na empresa DB1 Group. Um jog
 
 ## 🔖 Layout
 
-![cover](.github/capa.png?style=flat)
+![layout](.github/layout.png?style=flat)
 
 O layout do aplicativo foi projetado pelo desenvolvedor.
 
