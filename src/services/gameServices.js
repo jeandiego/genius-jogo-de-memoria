@@ -4,11 +4,11 @@ import { shuffle } from '~/utils/array';
 import { buildCard, createCardId } from '~/utils/cards';
 import { heroesCard } from './cardsServices';
 
-export function startGame() {
+export function StartGame() {
   const cards = buildCard(shuffle(heroesCard));
-  const duplicateCards = [...cards, ...cards];
+  const createCardsPair = [...cards, ...cards];
 
-  const shuffledCards = shuffle(duplicateCards);
+  const shuffledCards = shuffle(createCardsPair);
 
   store.dispatch(
     setCardsOnScreen(

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigation } from '@react-navigation/native';
 import HomeView from './view';
 import i18n from '~/lang';
+import { StartGame } from '~/services/gameServices';
 
 const Home = () => {
   const [currentLanguage, setCurrentLanguage] = useState('ptBR');
   const [greetings, setGreetings] = useState('');
   const { t } = useTranslation();
+  const navigation = useNavigation();
 
   const ChangeLanguage = () => {
     if (currentLanguage === 'ptBR') {
@@ -28,6 +31,11 @@ const Home = () => {
     } else {
       setGreetings(t('GREETINGS.NIGHT'));
     }
+  };
+
+  const handleGoToGame = () => {
+    navigation.navigate('Game');
+    StartGame();
   };
 
   const statistics = [
@@ -71,6 +79,7 @@ const Home = () => {
       greetings={greetings}
       statistics={statistics}
       leaderboard={leaderboard}
+      handleGoToGame={handleGoToGame}
     />
   );
 };

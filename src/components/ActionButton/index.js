@@ -3,10 +3,10 @@ import GeniusText from '../GeniusText';
 
 import { Container } from './styles';
 
-const ActionButton = ({ text, ...rest }) => {
+const ActionButton = ({ text, size, ...rest }) => {
   return (
     <Container {...rest}>
-      <GeniusText color="white" size={24} fontFamily="bold">
+      <GeniusText color="white" size={size} fontFamily="bold">
         {text}
       </GeniusText>
     </Container>

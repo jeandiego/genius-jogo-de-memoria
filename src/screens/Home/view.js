@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigation, CommonActions } from '@react-navigation/native';
 import ActionButton from '~/components/ActionButton';
 import GeniusText from '~/components/GeniusText';
 import {
@@ -14,13 +13,8 @@ import Header from '~/components/Header';
 import StatsCard from '~/components/StatsCard';
 import LeaderboardCard from '~/components/LeaderboardCard';
 
-const HomeView = ({ greetings, statistics, leaderboard }) => {
-  const navigation = useNavigation();
+const HomeView = ({ greetings, statistics, leaderboard, handleGoToGame }) => {
   const { t } = useTranslation();
-
-  const handleGoToGame = () => {
-    navigation.navigate('Game');
-  };
 
   return (
     <Container background="primary">
@@ -61,6 +55,7 @@ const HomeView = ({ greetings, statistics, leaderboard }) => {
         <ActionButton
           text={t('HOME.BUTTON_PLAY')}
           onPress={handleGoToGame}
+          size={24}
           background="secondary"
         />
       </FooterAction>
