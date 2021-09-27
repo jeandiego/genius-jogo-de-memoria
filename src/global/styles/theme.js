@@ -9,6 +9,8 @@ export const common = {
   podium1: '#F0A226',
   podium2: '#3DC6FC',
   podium3: '#4DD7B6',
+
+  opacity: 'rgba(0,0,0,0.8)',
 };
 
 export const lightTheme = {
@@ -18,8 +20,7 @@ export const lightTheme = {
   primary_light: '#65A6D0',
   primary_dark: '#0A67A4',
 
-  background: '#F0F2F5',
-  cardBackground: '#FFFFFF',
+  modalBackground: '#FFFFFF',
 
   secondary: '#FFBC01',
   secondary_light: '#FECD3F',
@@ -44,8 +45,7 @@ export const darkTheme = {
   primary_light: '#65A6D0',
   primary_dark: '#0A67A4',
 
-  background: '#121015',
-  cardBackground: '#1F1E25',
+  modalBackground: '#1F1E25',
 
   secondary: '#FF872C',
   secondary_light: 'rgba(255, 135, 44, 0.3)',
