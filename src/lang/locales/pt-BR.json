@@ -17,7 +17,9 @@
       "STATS": "Estatísticas",
       "TOP_LEADERBOARD": "Top 3 jogadores",
       "PLACEHOLDER": "Adicione um novo jogador",
-      "SELECT_USER": "Selecionar outro jogador: "
+      "SELECT_USER": "Selecionar outro jogador: ",
+      "BESTSCORE": "Menor número de jogadas",
+      "POSITION": "Posição no Ranking"
     },
     "GREETINGS": {
       "MORNING": "Bom dia",
@@ -32,13 +34,12 @@
       "CONGRATS": "Parabéns, você encontrou todos os pares!",
       "BUTTON_RESTART": "Iniciar nova partida",
       "BUTTON_GO_HOME": "Sair do jogo"
-
     },
     "LEADERBOARD": {
       "TITLE": "Melhores jogadores",
       "GOBACK": "Voltar",
-      "MESSAGE" : "Hmmmmmm......... \n Parece que ninguém jogou ainda! Que tal ser o primeiro a jogar?",
-      "UFO_MESSAGE" : "Já faz um tempo que ninguém \n esteve aqui..."
+      "MESSAGE": "Hmmmmmm......... \n Parece que ninguém jogou ainda! Que tal ser o primeiro a jogar?",
+      "UFO_MESSAGE": "Já faz um tempo que ninguém \n esteve aqui..."
     }
   }
 }
