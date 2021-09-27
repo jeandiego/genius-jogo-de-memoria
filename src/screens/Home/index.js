@@ -61,7 +61,7 @@ const Home = () => {
       {
         id: 2,
         text: t('HOME.POSITION'),
-        results: userStats.position,
+        results: `${userStats.position}º`,
       },
     ]);
   };
