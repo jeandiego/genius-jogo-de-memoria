@@ -6,6 +6,6 @@ export const Container = styled.View`
   background-color: ${(p) =>
     p.theme.colors[p.background] || p.theme.colors.background};
   padding: 0 16px;
-  padding-bottom: ${IPHONE_X_BOTTOM_SPACE}px;
+  padding-bottom: ${IPHONE_X_BOTTOM_SPACE + 24}px;
   padding-top: ${IPHONE_X_HEIGHT + 24}px;
 `;
