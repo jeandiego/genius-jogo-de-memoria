@@ -6,6 +6,7 @@ import { navigationRef } from './RootNavigation';
 import Home from '~/screens/Home';
 import Game from '~/screens/Game';
 import Start from '~/screens/Start';
+import Leaderboard from '~/screens/Leaderboard';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -16,6 +17,7 @@ export function Routes() {
         <Screen name="Start" component={Start} />
         <Screen name="Home" component={Home} />
         <Screen name="Game" component={Game} />
+        <Screen name="Leaderboard" component={Leaderboard} />
       </Navigator>
     </NavigationContainer>
   );
