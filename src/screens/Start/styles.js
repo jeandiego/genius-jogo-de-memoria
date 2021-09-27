@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import { Platform, KeyboardAvoidingView } from 'react-native';
 
 export const KeyboardView = styled(KeyboardAvoidingView).attrs({
-  behavior: Platform.OS === 'ios' ? 'padding' : 'height',
+  behavior: 'padding',
 })`
   flex: 1;
   width: 100%;
@@ -13,7 +13,6 @@ export const KeyboardView = styled(KeyboardAvoidingView).attrs({
 export const IconView = styled.View`
   width: 164px;
   height: 164px;
-  border-radius: 200px;
 `;
 
 export const GreetingsView = styled.View`

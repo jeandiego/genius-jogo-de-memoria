@@ -51,6 +51,7 @@ const StartView = ({ nickname, setNickname, handleNewUser, onPress }) => {
           />
         </InputView>
       </KeyboardView>
+
       <ActionButton
         text={t('START.BUTTON_START')}
         activeOpacity={0.75}
