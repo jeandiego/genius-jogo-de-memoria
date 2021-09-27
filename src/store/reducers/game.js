@@ -32,6 +32,7 @@ const gameSlice = createSlice({
       } else {
         state.secondCard = cardsFiltered;
         state.lockedMode = true;
+        state.moves += 1;
       }
     },
     clearCards: (state, action) => {
@@ -48,14 +49,11 @@ const gameSlice = createSlice({
       state.secondCard = null;
       state.lockedMode = false;
     },
-    addMoves: (state) => {
-      state.moves += 1;
-    },
     clearGame: () => GAME_INITIAL_STATE,
   },
 });
 
-export const { setCardsOnScreen, setCard, addMoves, clearCards, clearGame } =
+export const { setCardsOnScreen, setCard, clearCards, clearGame } =
   gameSlice.actions;
 
 export const gameReducer = gameSlice.reducer;
