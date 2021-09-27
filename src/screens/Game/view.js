@@ -2,12 +2,12 @@ import React from 'react';
 import PrimaryCard from '~/components/PrimaryCard';
 import Header from '~/components/Header';
 import { ContentView, CardsWrapper, Container } from './styles';
-import FinishedModal from '~/components/FinishedModal';
+import EndGameModal from '~/components/EndGameModal';
 
 const GameView = ({ cards, onPress, modalVisible, restartGame }) => {
   return (
     <Container background="primary">
-      {modalVisible && <FinishedModal restartGame={restartGame} />}
+      {modalVisible && <EndGameModal restartGame={restartGame} />}
       <Header type="Game" />
       <ContentView>
         <CardsWrapper>
