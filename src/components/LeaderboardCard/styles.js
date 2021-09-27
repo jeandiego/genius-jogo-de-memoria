@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native';
 export const Container = styled(TouchableOpacity)`
   background: ${({ theme }) => theme.colors.primary_light};
   padding: 12px;
-  margin: 4px 12px;
+  margin: 4px 0;
   border-radius: 8px;
   flex-direction: row;
   justify-content: space-between;

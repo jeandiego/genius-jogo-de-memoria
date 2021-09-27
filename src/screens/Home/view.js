@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ActionButton from '~/components/ActionButton';
 import GeniusText from '~/components/GeniusText';
@@ -13,19 +13,22 @@ import Header from '~/components/Header';
 import StatsCard from '~/components/StatsCard';
 import LeaderboardCard from '~/components/LeaderboardCard';
 import UsersModal from '~/components/UsersModal';
+import { EmptyLeaderboard } from '~/components/EmptyComponent';
 
-const HomeView = ({ greetings, statistics, leaderboard, handleGoToGame }) => {
+const HomeView = ({
+  greetings,
+  statistics,
+  leaderboard,
+  goToGame,
+  goToLeaderboard,
+  onOpen,
+  modalRef,
+}) => {
   const { t } = useTranslation();
-
-  const modalizeRef = useRef(null);
-
-  const onOpen = () => {
-    modalizeRef.current?.open();
-  };
 
   return (
     <Container background="primary">
-      <Header greetings={greetings} />
+      <Header greetings={greetings} goToLeaderboard={goToLeaderboard} />
 
       <ContentWrapper>
         <GeniusText size={26} fontFamily="medium" color="textHeading" pLeft={8}>
@@ -48,33 +51,43 @@ const HomeView = ({ greetings, statistics, leaderboard, handleGoToGame }) => {
         </GeniusText>
 
         <LeaderboardWrapper>
-          {leaderboard.map((item) => (
-            <LeaderboardCard
-              key={item.username}
-              leaderboard={item}
-              activeOpacity={0.75}
+          {leaderboard ? (
+            <EmptyLeaderboard
+              size={64}
+              message={t('LEADERBOARD.UFO_MESSAGE')}
             />
-          ))}
+          ) : (
+            leaderboard
+              .slice(0, 3)
+              .map((item, index) => (
+                <LeaderboardCard
+                  key={item.id}
+                  position={index + 1}
+                  leaderboard={item}
+                  activeOpacity={0.8}
+                  onPress={goToLeaderboard}
+                />
+              ))
+          )}
         </LeaderboardWrapper>
       </ContentWrapper>
 
       <FooterView>
         <ActionButton
           text={t('HOME.BUTTON_PLAY')}
-          onPress={handleGoToGame}
+          onPress={goToGame}
           size={24}
           background="secondary"
-          mBottom={16}
+          mBottom={8}
         />
         <ActionButton
           text="Adicionar novo jogador"
           onPress={onOpen}
-          width={90}
-          size={20}
+          size={18}
           background="success"
         />
       </FooterView>
-      <UsersModal modalRef={modalizeRef} />
+      <UsersModal modalRef={modalRef} />
     </Container>
   );
 };

@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 import HomeView from './view';
 import i18n from '~/lang';
 import { StartGame } from '~/services/gameServices';
 
 const Home = () => {
   const [currentLanguage, setCurrentLanguage] = useState('ptBR');
+  const { leaderboard } = useSelector((state) => state);
   const [greetings, setGreetings] = useState('');
   const { t } = useTranslation();
   const navigation = useNavigation();
+  const modalizeRef = useRef(null);
 
   const ChangeLanguage = () => {
     if (currentLanguage === 'ptBR') {
@@ -38,6 +41,14 @@ const Home = () => {
     StartGame();
   };
 
+  const handleGoToLeaderboard = () => {
+    navigation.navigate('Leaderboard');
+  };
+
+  const onOpen = () => {
+    modalizeRef.current?.open();
+  };
+
   const statistics = [
     {
       text: 'Menor número de jogadas',
@@ -49,29 +60,21 @@ const Home = () => {
     },
   ];
 
-  const leaderboard = [
-    {
-      username: 'Poliana Camila',
-      plays: '24',
-      position: 1,
-    },
-    {
-      username: 'Jean Diego',
-      plays: '27',
-      position: 2,
-    },
-    {
-      username: 'Ynei Francisco',
-      plays: '30',
-      position: 3,
-    },
-  ];
-
   useEffect(() => {
     getGreetings();
   }, []);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    navigation.dispatch((state) => {
+      const routes = state.routes.filter((r) => r.name !== 'Start');
+
+      return CommonActions.reset({
+        ...state,
+        routes,
+        index: routes.length - 1,
+      });
+    });
+  }, []);
 
   return (
     <HomeView
@@ -79,7 +82,10 @@ const Home = () => {
       greetings={greetings}
       statistics={statistics}
       leaderboard={leaderboard}
-      handleGoToGame={handleGoToGame}
+      goToGame={handleGoToGame}
+      goToLeaderboard={handleGoToLeaderboard}
+      onOpen={onOpen}
+      modalRef={modalizeRef}
     />
   );
 };

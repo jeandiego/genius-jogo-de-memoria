@@ -11,7 +11,7 @@ import {
 import GeniusText from '../GeniusText';
 import Trophy from '~/assets/svgs/trophy.svg';
 
-const HeaderHome = ({ greetings }) => {
+const HeaderHome = ({ greetings, goToLeaderboard }) => {
   const { currentUser } = useSelector((state) => state.user);
 
   return (
@@ -28,7 +28,7 @@ const HeaderHome = ({ greetings }) => {
           {currentUser?.user}
         </GeniusText>
       </ViewWrapper>
-      <IconButton>
+      <IconButton onPress={goToLeaderboard}>
         <Trophy width={30} height={30} fill="black" />
       </IconButton>
     </Container>

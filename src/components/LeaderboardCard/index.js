@@ -3,8 +3,8 @@ import GeniusText from '../GeniusText';
 
 import { Container, ScoreWrapper, RankingView } from './styles';
 
-const LeaderboardCard = ({ leaderboard, ...props }) => {
-  const { username, position, plays } = leaderboard;
+const LeaderboardCard = ({ leaderboard, position, ...props }) => {
+  const { user, moves } = leaderboard;
 
   return (
     <Container {...props}>
@@ -14,12 +14,12 @@ const LeaderboardCard = ({ leaderboard, ...props }) => {
         </GeniusText>
       </RankingView>
       <GeniusText color="textHeading" size={18} fontFamily="medium">
-        {username}
+        {user}
       </GeniusText>
 
       <ScoreWrapper>
         <GeniusText color="textHeading" size={20} fontFamily="bold">
-          {plays}
+          {moves}
         </GeniusText>
         <GeniusText color="textHighlight" fontFamily="bold" size={14}>
           jogadas
