@@ -1,13 +1,47 @@
 {
   "error": {},
   "translation": {
-    "REGION": "BR",
-    "REGION_MASK": "pt-BR",
+    "REGION": "US",
+    "REGION_MASK": "en-US",
     "START": {
       "WELCOME": "Welcome",
-      "DESCRIPTION": "Let`s check your memory in this game? Enter your name and Go Play!",
+      "BUTTON_START": "Start game",
+      "CREATE_USER": "Create your user",
+      "DESCRIPTION": "Let`s check your brain in this memory game? ",
       "BUTTON_START": "Start Game",
       "PLACEHOLDER": "Enter your name..."
+    },
+    "HOME": {
+      "BUTTON_PLAY": "Iniciar partida",
+      "BUTTON_CHANGE_USER": "Trocar jogador",
+      "BUTTON_NEW_USER": "Adicionar novo jogador",
+      "STATS": "Estatísticas",
+      "TOP_LEADERBOARD": "Top 3 jogadores",
+      "PLACEHOLDER": "Adicione um novo jogador",
+      "SELECT_USER": "Selecionar jogador: ",
+      "BESTSCORE": "Menor número de jogadas",
+      "POSITION": "Posição no Ranking",
+      "BUTTON_ADD_CHANGE": "Adicionar ou trocar jogador"
+    },
+    "GREETINGS": {
+      "MORNING": "Bom dia",
+      "AFTERNOON": "Boa tarde",
+      "NIGHT": "Boa noite"
+    },
+    "GAME": {
+      "PLAYER": "Jogador",
+      "MOVES": "Jogadas"
+    },
+    "MODAL": {
+      "CONGRATS": "Parabéns, você encontrou todos os pares!",
+      "BUTTON_RESTART": "Iniciar nova partida",
+      "BUTTON_GO_HOME": "Sair do jogo"
+    },
+    "LEADERBOARD": {
+      "TITLE": "Melhores jogadores",
+      "GOBACK": "Voltar",
+      "MESSAGE": "Hmmmmmm......... \n Parece que ninguém jogou ainda! Que tal ser o primeiro a jogar?",
+      "UFO_MESSAGE": "Já faz um tempo que ninguém \n esteve aqui..."
     }
   }
 }

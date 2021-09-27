@@ -5,10 +5,10 @@
     "REGION_MASK": "pt-BR",
     "START": {
       "WELCOME": "Bem-vindo",
-      "DESCRIPTION": "Bora testar a sua memória neste jogo? Digite seu nome e desce o Play!",
+      "DESCRIPTION": "Bora testar a sua memória neste jogo?",
       "BUTTON_START": "Começar o jogo",
       "CREATE_USER": "Criar seu usuário",
-      "PLACEHOLDER": "Digite seu nome ou apelido..."
+      "PLACEHOLDER": "Digite seu nome..."
     },
     "HOME": {
       "BUTTON_PLAY": "Iniciar partida",
