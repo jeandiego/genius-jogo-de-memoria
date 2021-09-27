@@ -13,8 +13,11 @@
     "HOME": {
       "BUTTON_PLAY": "Iniciar partida",
       "BUTTON_CHANGE_USER": "Trocar jogador",
+      "BUTTON_NEW_USER": "Adicionar novo jogador",
       "STATS": "Estatísticas",
-      "TOP_LEADERBOARD": "Top 3 jogadores"
+      "TOP_LEADERBOARD": "Top 3 jogadores",
+      "PLACEHOLDER": "Adicione um novo jogador",
+      "SELECT_USER": "Selecionar outro jogador: "
     },
     "GREETINGS": {
       "MORNING": "Bom dia",

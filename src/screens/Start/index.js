@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import StartView from './view';
@@ -11,11 +11,11 @@ const Start = () => {
   const dispatch = useDispatch();
 
   const handleNewUser = () => {
-    if (!nickname) return;
+    if (!currentUser) return;
 
     dispatch(addNewUser({ user: nickname }));
     setNickname('');
-    navigation.navigate('Home', { nickname });
+    navigation.navigate('Home');
   };
 
   const handleGoToHome = () => {
@@ -23,6 +23,8 @@ const Start = () => {
     handleNewUser();
     navigation.navigate('Home');
   };
+
+  useEffect(() => {}, [nickname]);
 
   return (
     <StartView

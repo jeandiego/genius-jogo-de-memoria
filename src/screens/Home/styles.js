@@ -5,6 +5,7 @@ import { IPHONE_X_BOTTOM_SPACE } from '~/config/constants';
 
 export const Container = styled(GlobalContainer)`
   padding: 0;
+  /* padding-bottom: ${IPHONE_X_BOTTOM_SPACE + 24}px; */
   justify-content: space-between;
 `;
 
@@ -26,7 +27,8 @@ export const LeaderboardWrapper = styled.View`
   justify-content: space-between;
 `;
 
-export const FooterAction = styled.View`
-  padding: 0px 16px;
+export const FooterView = styled.View`
+  align-items: center;
+  padding: 16px;
   padding-bottom: ${IPHONE_X_BOTTOM_SPACE}px;
 `;

@@ -14,13 +14,7 @@ import StatsCard from '~/components/StatsCard';
 import LeaderboardCard from '~/components/LeaderboardCard';
 import UsersModal from '~/components/UsersModal';
 
-const HomeView = ({
-  greetings,
-  statistics,
-  leaderboard,
-  handleGoToGame,
-  nickname,
-}) => {
+const HomeView = ({ greetings, statistics, leaderboard, handleGoToGame }) => {
   const { t } = useTranslation();
 
   const modalizeRef = useRef(null);

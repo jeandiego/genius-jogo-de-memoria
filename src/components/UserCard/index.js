@@ -14,9 +14,9 @@ const Container = styled(TouchableOpacity)`
   margin-bottom: 8px;
 `;
 
-const UserCard = ({ user }) => {
+const UserCard = ({ user, ...rest }) => {
   return (
-    <Container>
+    <Container {...rest}>
       <GeniusText size={18} fontFamily="bold" color="primary_dark">
         {user}
       </GeniusText>
