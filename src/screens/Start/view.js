@@ -5,7 +5,7 @@ import GlobalContainer from '~/components/Container';
 import GeniusInput from '~/components/GeniusInput';
 import GeniusText from '~/components/GeniusText';
 import { GreetingsView, IconView, InputView, KeyboardView } from './styles';
-import LogoSvg from '~/assets/svgs/brain.svg';
+import LogoSvg from '~/assets/svgs/layers.svg';
 
 const StartView = ({ nickname, setNickname, handleNewUser, onPress }) => {
   const [isFocused, setIsFocused] = useState(false);

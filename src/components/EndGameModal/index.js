@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
+import LottieView from 'lottie-react-native';
 import ActionButton from '../ActionButton';
 import GeniusText from '../GeniusText';
 import { Container, ContentView, ButtonWrapper, CongratsView } from './styles';
@@ -27,6 +28,15 @@ const EndGameModal = ({ restartGame, modalVisible, setModalVisible }) => {
       <Container background="opacity">
         <ContentView>
           <CongratsView>
+            <LottieView
+              loop
+              autoPlay
+              source={require('~/animations/congrats.json')}
+              style={{
+                width: 280,
+                height: 280,
+              }}
+            />
             <GeniusText
               size={28}
               color="textHeading"

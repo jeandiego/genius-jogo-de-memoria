@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '~/assets/svgs/brain.svg';
+import Logo from '~/assets/svgs/layers.svg';
 import { Container } from './styles';
 
 const PrimaryCard = ({ data, ...props }) => {
@@ -8,7 +8,7 @@ const PrimaryCard = ({ data, ...props }) => {
       {data.shown ? (
         <data.image width={74} height={74} />
       ) : (
-        <Logo width={52} height={52} fill="white" />
+        <Logo width={42} height={42} fill="white" />
       )}
     </Container>
   );
