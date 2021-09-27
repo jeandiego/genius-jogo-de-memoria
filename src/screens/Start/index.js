@@ -19,7 +19,7 @@ const Start = () => {
   };
 
   const handleGoToHome = () => {
-    if (!currentUser) return;
+    if (!nickname) return;
     handleNewUser();
     navigation.navigate('Home');
   };

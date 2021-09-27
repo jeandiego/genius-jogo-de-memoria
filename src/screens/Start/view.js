@@ -25,26 +25,18 @@ const HomeView = ({ nickname, setNickname, handleNewUser, onPress }) => {
         <IconView />
         <GreetingsView>
           <GeniusText
-            color="white"
+            color="textHeading"
             fontFamily="bold"
-            size={28}
+            size={32}
             pBottom={16}
             align="center">
             {t('START.WELCOME')}
           </GeniusText>
-          <GeniusText color="white" align="center" size={18}>
+          <GeniusText color="textHeading" align="center" size={20}>
             {t('START.DESCRIPTION')}
           </GeniusText>
         </GreetingsView>
         <InputView>
-          {/* <GeniusText
-            align="center"
-            fontFamily="bold"
-            color="primary_dark"
-            size={16}
-            pBottom={8}>
-            {t('START.CREATE_USER')}
-          </GeniusText> */}
           <GeniusInput
             isFocused={isFocused}
             placeholder={t('START.PLACEHOLDER')}
@@ -59,8 +51,10 @@ const HomeView = ({ nickname, setNickname, handleNewUser, onPress }) => {
       <ActionButton
         text={t('START.BUTTON_START')}
         activeOpacity={0.75}
+        size={24}
+        disabled={!nickname}
         onPress={onPress}
-        background="secondary"
+        background={nickname ? 'secondary' : 'textDisabled'}
       />
     </GlobalContainer>
   );
