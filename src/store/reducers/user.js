@@ -14,12 +14,9 @@ const userSlice = createSlice({
       const newUser = { ...action.payload, id: createId };
       state.currentUser = newUser;
       state.users.push(newUser);
-      // if (state.users.length > 0) {
-      //   state.users.sort((a, b) => a.user - b.user);
-      // }
+      state.users.sort((a, b) => b.id - a.id);
     },
     pickUser: (state, action) => {
-      console.log(action.payload);
       state.currentUser = action.payload;
     },
     clearUser: () => USER_INITIAL_STATE,
