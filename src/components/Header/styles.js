@@ -23,22 +23,18 @@ export const IconButton = styled.TouchableOpacity`
   border-radius: 8px;
 `;
 
-export const LevelWrapper = styled.View`
-  justify-content: space-between;
-  flex-direction: row;
-`;
-
 export const LineWrapper = styled.View`
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
-export const CounterWrapper = styled.View`
+export const ColumnWrapper = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.colors.secondary_dark};
+  background-color: ${(p) =>
+    p.theme.colors[p.background] || p.theme.colors.secondary};
   padding: 8px 0;
   justify-content: center;
   align-items: center;
-  margin: 0 8px;
+  margin: 0 4px;
   border-radius: 8px;
 `;

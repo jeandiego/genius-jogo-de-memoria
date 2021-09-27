@@ -6,7 +6,7 @@ import {
   IconButton,
   ViewWrapper,
   LineWrapper,
-  CounterWrapper,
+  ColumnWrapper,
 } from './styles';
 import GeniusText from '../GeniusText';
 import Trophy from '~/assets/svgs/trophy.svg';
@@ -21,7 +21,7 @@ const HeaderHome = ({ greetings }) => {
           size={20}
           fontFamily="regular"
           color="textHeading"
-          pBottom={8}>
+          pBottom={4}>
           {greetings}
         </GeniusText>
         <GeniusText size={26} fontFamily="bold" color="textHeading">
@@ -41,28 +41,37 @@ const HeaderGame = ({ ...props }) => {
   const { t } = useTranslation();
 
   return (
-    <Container style={{ flexDirection: 'column' }} {...props}>
-      <GeniusText size={18} fontFamily="bold" pBottom={8}>
-        <GeniusText>Jogador:</GeniusText> {currentUser?.user}
-      </GeniusText>
-      <LineWrapper>
-        <CounterWrapper>
-          <GeniusText size={24} fontFamily="bold" color="primary_dark">
-            {moves}
-          </GeniusText>
-          <GeniusText size={14} color="primary_dark">
-            {t('GAME.MOVES')}
-          </GeniusText>
-        </CounterWrapper>
-        <CounterWrapper>
-          <GeniusText size={24} fontFamily="bold" color="primary_dark">
-            00:00
-          </GeniusText>
-          <GeniusText size={14} color="primary_dark">
-            {t('GAME.TIMER')}
-          </GeniusText>
-        </CounterWrapper>
-      </LineWrapper>
+    <Container {...props}>
+      <ViewWrapper>
+        <LineWrapper>
+          <ColumnWrapper background="primary_dark">
+            <GeniusText color="secondary" fontFamily="bold">
+              {t('GAME.PLAYER')}
+            </GeniusText>
+          </ColumnWrapper>
+          <ColumnWrapper background="primary_dark">
+            <GeniusText color="secondary" fontFamily="bold">
+              {t('GAME.MOVES')}
+            </GeniusText>
+          </ColumnWrapper>
+        </LineWrapper>
+        <LineWrapper>
+          <ColumnWrapper>
+            <GeniusText
+              size={18}
+              fontFamily="bold"
+              color="primary_dark"
+              numberOfLines={1}>
+              {currentUser?.user}
+            </GeniusText>
+          </ColumnWrapper>
+          <ColumnWrapper>
+            <GeniusText size={24} fontFamily="bold" color="primary_dark">
+              {moves}
+            </GeniusText>
+          </ColumnWrapper>
+        </LineWrapper>
+      </ViewWrapper>
     </Container>
   );
 };
