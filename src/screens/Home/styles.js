@@ -5,7 +5,6 @@ import { IPHONE_X_BOTTOM_SPACE } from '~/config/constants';
 
 export const Container = styled(GlobalContainer)`
   padding: 0;
-  /* padding-bottom: ${IPHONE_X_BOTTOM_SPACE + 24}px; */
   justify-content: space-between;
 `;
 

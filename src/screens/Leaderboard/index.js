@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 import LeaderboardView from './view';
 
 const Leaderboard = () => {
-  const { leaderboard } = useSelector((state) => state);
+  const { data } = useSelector((state) => state.leaderboard);
 
-  return <LeaderboardView leaderboard={leaderboard} />;
+  return <LeaderboardView leaderboard={data} />;
 };
 
 export default Leaderboard;

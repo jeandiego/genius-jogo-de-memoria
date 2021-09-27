@@ -16,6 +16,7 @@ import UsersModal from '~/components/UsersModal';
 import { EmptyLeaderboard } from '~/components/EmptyComponent';
 
 const HomeView = ({
+  user,
   greetings,
   statistics,
   leaderboard,
@@ -31,19 +32,19 @@ const HomeView = ({
       <Header greetings={greetings} goToLeaderboard={goToLeaderboard} />
 
       <ContentWrapper>
-        <GeniusText size={26} fontFamily="medium" color="textHeading" pLeft={8}>
+        <GeniusText size={26} fontFamily="bold" color="textHeading" pLeft={8}>
           {t('HOME.STATS')}
         </GeniusText>
 
         <StatsWrapper>
           {statistics.map((item) => (
-            <StatsCard key={item.results} data={item} />
+            <StatsCard key={item.id} data={item} />
           ))}
         </StatsWrapper>
 
         <GeniusText
           size={26}
-          fontFamily="medium"
+          fontFamily="bold"
           color="textHeading"
           pLeft={8}
           pTop={24}>
@@ -51,7 +52,7 @@ const HomeView = ({
         </GeniusText>
 
         <LeaderboardWrapper>
-          {leaderboard ? (
+          {!leaderboard.length ? (
             <EmptyLeaderboard
               size={64}
               message={t('LEADERBOARD.UFO_MESSAGE')}

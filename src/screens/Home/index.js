@@ -8,8 +8,10 @@ import { StartGame } from '~/services/gameServices';
 
 const Home = () => {
   const [currentLanguage, setCurrentLanguage] = useState('ptBR');
-  const { leaderboard } = useSelector((state) => state);
+  const { data } = useSelector((state) => state.leaderboard);
+  const { currentUser } = useSelector((state) => state.user);
   const [greetings, setGreetings] = useState('');
+  const [statistics, setStatistics] = useState([]);
   const { t } = useTranslation();
   const navigation = useNavigation();
   const modalizeRef = useRef(null);
@@ -49,16 +51,30 @@ const Home = () => {
     modalizeRef.current?.open();
   };
 
-  const statistics = [
-    {
-      text: 'Menor número de jogadas',
-      results: '75',
-    },
-    {
-      text: 'Posição no Ranking',
-      results: '1º',
-    },
-  ];
+  const generateStatistics = (userStats) => {
+    setStatistics([
+      {
+        id: 1,
+        text: t('HOME.BESTSCORE'),
+        results: userStats?.moves ? userStats.moves : '-',
+      },
+      {
+        id: 2,
+        text: t('HOME.POSITION'),
+        results: userStats.position,
+      },
+    ]);
+  };
+
+  useEffect(() => {
+    const userPosition = data.findIndex((item) => item.id === currentUser.id);
+    const userStats = data.find((item) => item.id === currentUser.id);
+
+    generateStatistics({
+      position: userPosition !== -1 ? userPosition + 1 : '-',
+      ...userStats,
+    });
+  }, [data, currentUser]);
 
   useEffect(() => {
     getGreetings();
@@ -78,10 +94,11 @@ const Home = () => {
 
   return (
     <HomeView
+      user={currentUser}
       onPress={ChangeLanguage}
       greetings={greetings}
       statistics={statistics}
-      leaderboard={leaderboard}
+      leaderboard={data}
       goToGame={handleGoToGame}
       goToLeaderboard={handleGoToLeaderboard}
       onOpen={onOpen}
