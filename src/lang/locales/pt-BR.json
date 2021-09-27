@@ -22,8 +22,13 @@
       "NIGHT": "Boa noite"
     },
     "GAME": {
-    "TIMER": "tempo",
-    "MOVES" : "jogadas"
+      "PLAYER": "Jogador",
+      "MOVES": "Jogadas"
+    },
+    "MODAL": {
+      "CONGRATS": "Parabéns, você encontrou todos os pares!",
+      "BUTTON_RESTART": "Iniciar nova partida",
+      "BUTTON_GO_HOME": "Sair do jogo"
     }
   }
 }
