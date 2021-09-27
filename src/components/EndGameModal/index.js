@@ -40,7 +40,7 @@ const EndGameModal = ({ restartGame, modalVisible, setModalVisible }) => {
             <ActionButton
               text={t('MODAL.BUTTON_RESTART')}
               size={22}
-              marginBottom={18}
+              mBottom={18}
               onPress={restartGame}
               background="secondary"
             />

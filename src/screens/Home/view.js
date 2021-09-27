@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import ActionButton from '~/components/ActionButton';
 import GeniusText from '~/components/GeniusText';
 import {
   Container,
   ContentWrapper,
-  FooterAction,
+  FooterView,
   LeaderboardWrapper,
   StatsWrapper,
 } from './styles';
 import Header from '~/components/Header';
 import StatsCard from '~/components/StatsCard';
 import LeaderboardCard from '~/components/LeaderboardCard';
+import UsersModal from '~/components/UsersModal';
 
-const HomeView = ({ greetings, statistics, leaderboard, handleGoToGame }) => {
+const HomeView = ({
+  greetings,
+  statistics,
+  leaderboard,
+  handleGoToGame,
+  nickname,
+}) => {
   const { t } = useTranslation();
+
+  const modalizeRef = useRef(null);
+
+  const onOpen = () => {
+    modalizeRef.current?.open();
+  };
 
   return (
     <Container background="primary">
@@ -51,14 +64,23 @@ const HomeView = ({ greetings, statistics, leaderboard, handleGoToGame }) => {
         </LeaderboardWrapper>
       </ContentWrapper>
 
-      <FooterAction>
+      <FooterView>
         <ActionButton
           text={t('HOME.BUTTON_PLAY')}
           onPress={handleGoToGame}
           size={24}
           background="secondary"
+          mBottom={16}
         />
-      </FooterAction>
+        <ActionButton
+          text="Adicionar novo jogador"
+          onPress={onOpen}
+          width={90}
+          size={20}
+          background="success"
+        />
+      </FooterView>
+      <UsersModal modalRef={modalizeRef} />
     </Container>
   );
 };
