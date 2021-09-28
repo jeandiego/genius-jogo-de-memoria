@@ -45,7 +45,7 @@ Para executar o projeto, você deve utilizar gerenciador de pacotes **yarn** ou 
 Build on iOS: Rode os seguintes comandos para buildar o projeto no simulador iOS:
 
 ```cl
-yarn pod  // Necessário antes de buildar no device/simulator
+yarn pod  // Necessário antes de buildar no device/emulator
 ```
 
 ```cl
@@ -64,5 +64,5 @@ yarn start
 <br />
 
 <div align="center">
-  <small>Desenvolvido por Jean Diego Dal'Santo - Junho/2021</small>
+  <small>Desenvolvido por Jean Diego Dal'Santo - Setembro/2021</small>
 </div>
