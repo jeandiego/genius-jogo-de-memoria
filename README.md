@@ -1,5 +1,5 @@
 ## 💻 Projeto
-Aplicativo de teste técnico para processo seletivo na empresa DB1 Group. Um jogo de memória de Super-Heróis com 12 combinações diferentes para jogar com seus amigos e ver quem vence em menos jogadas. 
+Aplicativo de teste técnico para processo seletivo na empresa DB1 Group. Um jogo de memória baseado na MARVEL & DC Comics com 12 combinações diferentes para jogar com seus amigos e ver quem vence em menos jogadas. 
 ## ⚡️ Features 
 
 
