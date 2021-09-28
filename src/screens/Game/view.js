@@ -4,10 +4,10 @@ import Header from '~/components/Header';
 import { ContentView, CardsWrapper, Container } from './styles';
 import EndGameModal from '~/components/EndGameModal';
 
-const GameView = ({ cards, onPress, modalVisible, restartGame }) => {
+const GameView = ({ cards, moves, onPress, modalVisible, restartGame }) => {
   return (
     <Container background="primary">
-      {modalVisible && <EndGameModal restartGame={restartGame} />}
+      {modalVisible && <EndGameModal restartGame={restartGame} moves={moves} />}
       <Header type="Game" />
       <ContentView>
         <CardsWrapper>

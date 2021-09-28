@@ -69,6 +69,7 @@ const Game = () => {
       modalVisible={modalVisible}
       setModalVisible={setModalVisible}
       restartGame={handleRestartGame}
+      moves={moves}
     />
   );
 };

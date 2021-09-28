@@ -32,7 +32,7 @@
       "MOVES": "Jogadas"
     },
     "MODAL": {
-      "CONGRATS": "Parabéns, você encontrou todos os pares!",
+      "CONGRATS": "Parabéns, você encontrou todos os pares em {{moves}} jogadas!",
       "BUTTON_RESTART": "Iniciar nova partida",
       "BUTTON_GO_HOME": "Sair do jogo"
     },

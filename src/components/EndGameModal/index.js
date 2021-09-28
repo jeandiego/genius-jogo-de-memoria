@@ -7,7 +7,12 @@ import ActionButton from '../ActionButton';
 import GeniusText from '../GeniusText';
 import { Container, ContentView, ButtonWrapper, CongratsView } from './styles';
 
-const EndGameModal = ({ restartGame, modalVisible, setModalVisible }) => {
+const EndGameModal = ({
+  restartGame,
+  moves,
+  modalVisible,
+  setModalVisible,
+}) => {
   const { t } = useTranslation();
   const navigation = useNavigation();
 
@@ -43,7 +48,7 @@ const EndGameModal = ({ restartGame, modalVisible, setModalVisible }) => {
               align="center"
               fontFamily="bold"
               pBottom={24}>
-              {t('MODAL.CONGRATS')}
+              {t('MODAL.CONGRATS', { moves })}
             </GeniusText>
           </CongratsView>
           <ButtonWrapper>
